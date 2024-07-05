@@ -9,7 +9,7 @@ const grades = {
 
 
 const login = document.querySelector("#profil > div.bloc.main > div > div.infos > div.item.login > span").innerText
-fetch(`https://${window.location.hostname}/user/${login}/notes?format=json`, {
+fetch(`https://${window.location.hostname}/user/${login.trim()}/notes?format=json`, {
     method: 'GET',
     credentials: 'include',
 }).then(response => response.json()).then(data => {
